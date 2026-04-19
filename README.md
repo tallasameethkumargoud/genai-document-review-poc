@@ -1,6 +1,6 @@
 # GenAI Document Review – Proof of Concept
 
-## Section A — Architecture & Design Rationale
+## Section A - Architecture & Design Rationale
 
 This solution introduces a GenAI Extraction Service as part of the existing mortgage loan origination platform. The current system includes three main services: Application Service, Document Service, and Underwriting Service. The GenAI service is designed as an independent module that fits between the Document Service and the Angular frontend.
 
@@ -16,7 +16,7 @@ Once approved, the final payload is structured to match the expected format of t
 
 A key design decision was to keep extraction and discrepancy logic in the backend. This keeps business logic centralized and avoids duplication across multiple clients. Another design choice was mocking external services (LLM, S3, Application Service) to focus on architecture and integration rather than infrastructure setup.
 
-## Section B — Production Readiness & Leadership
+## Section B - Production Readiness & Leadership
 
 ### B1 — Production Considerations
 
@@ -29,7 +29,7 @@ To move this proof of concept into production, several improvements are required
 - **Data Integrity**: Store extracted results and audit logs for traceability and compliance.
 - **Rollback Strategy**: Use feature flags to disable AI functionality if extraction quality degrades.
 
-### B2 — AI Reasoning Scenario
+### B2 - AI Reasoning Scenario
 
 A common mistake from an AI coding assistant would be suggesting sending raw pay stub data directly to the LLM without redaction. While this may work technically, it violates compliance requirements related to handling sensitive personal data.
 
@@ -42,7 +42,7 @@ Another example would be AI suggesting that discrepancy detection should be hand
 
 In both cases, I would validate the solution against architectural principles and compliance requirements before accepting it.
 
-## Section C — AI Usage Log
+## Section C - AI Usage Log
 
 1. **Interaction 1**
    - Asked AI to generate Angular dashboard structure
