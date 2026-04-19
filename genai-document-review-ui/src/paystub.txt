@@ -1,0 +1,39 @@
+==============================
+        PAY STUB
+==============================
+
+Employee Name: John Doe
+Employee ID: 12345
+Employer: Amazon
+Department: Engineering
+Pay Period: 03/01/2026 - 03/15/2026
+Pay Date: 03/16/2026
+
+------------------------------
+          EARNINGS
+------------------------------
+Base Salary: $4,000
+Bonus: $1,000
+Overtime: $0
+------------------------------
+Total Earnings: $5,000
+
+------------------------------
+         DEDUCTIONS
+------------------------------
+Federal Tax: $500
+State Tax: $200
+Health Insurance: $150
+Retirement (401k): $100
+------------------------------
+Total Deductions: $950
+
+------------------------------
+           SUMMARY
+------------------------------
+Net Pay: $4,050
+Year-To-Date (YTD) Earnings: $45,000
+
+==============================
+   END OF PAY STUB
+==============================

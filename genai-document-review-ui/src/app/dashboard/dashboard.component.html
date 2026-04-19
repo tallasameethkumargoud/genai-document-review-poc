@@ -1,0 +1,58 @@
+<h2>Dashboard</h2>
+
+<input type="file" #fileInput (change)="onFileSelected($event)" />
+<p *ngIf="selectedFileName">Selected: {{ selectedFileName }}</p>
+
+<button (click)="upload()">Upload Pay Stub</button>
+
+<div *ngIf="extractedData">
+  <h3>Comparison</h3>
+
+  <table border="1">
+    <tr>
+      <th>Field</th>
+      <th>User</th>
+      <th>AI (Editable)</th>
+    </tr>
+
+    <tr>
+      <td>Employer</td>
+      <td>{{ userData.employer }}</td>
+      <td><input [(ngModel)]="aiEditable.employer" /></td>
+    </tr>
+
+    <tr>
+      <td>Income</td>
+      <td [style.color]="isMismatch('income') ? 'red' : 'green'">
+        {{ userData.income }}
+      </td>
+      <td><input type="number" [(ngModel)]="aiEditable.income" /></td>
+    </tr>
+
+    <tr>
+      <td>YTD</td>
+      <td [style.color]="isMismatch('ytd') ? 'red' : 'green'">
+        {{ userData.ytd }}
+      </td>
+      <td><input type="number" [(ngModel)]="aiEditable.ytd" /></td>
+    </tr>
+
+    <!-- ✅ NEW ROWS -->
+    <tr>
+      <td>Pay Period Start</td>
+      <td>-</td>
+      <td>{{ aiEditable.payPeriodStart }}</td>
+    </tr>
+
+    <tr>
+      <td>Pay Period End</td>
+      <td>-</td>
+      <td>{{ aiEditable.payPeriodEnd }}</td>
+    </tr>
+  </table>
+
+  <br />
+
+  <button (click)="approve()">Approve</button>
+  <button (click)="reject()">Reject</button>
+</div>

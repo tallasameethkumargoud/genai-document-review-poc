@@ -1,0 +1,52 @@
+.approval-container {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.approval-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.approval-table th,
+.approval-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.approve {
+  background-color: green;
+  color: white;
+}
+
+.reject {
+  background-color: red;
+  color: white;
+}
+
+.status {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.approved {
+  color: green;
+}
+
+.rejected {
+  color: red;
+}

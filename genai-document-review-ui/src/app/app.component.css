@@ -1,0 +1,54 @@
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-side h1 {
+  margin: 0;
+}
+
+.pill-group {
+  display: flex;
+  gap: 10px;
+}
+
+.pill {
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: #1976d2;
+  color: white;
+  font-size: 14px;
+}
+
+.pill:hover {
+  background-color: #125aa0;
+}
+
+.logout {
+  margin-top: 10px;
+}
+
+button {
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: #444;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #222;
+}
+
+.main-content {
+  margin-top: 30px;
+}

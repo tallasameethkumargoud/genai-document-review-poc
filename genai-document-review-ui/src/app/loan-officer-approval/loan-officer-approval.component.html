@@ -1,0 +1,77 @@
+<div class="approval-container">
+
+  <h2>Loan Officer Approval</h2>
+
+  <!-- If no application -->
+  <div *ngIf="!application">
+    <p>No application available for review.</p>
+  </div>
+
+  <!-- If application exists -->
+  <div *ngIf="application">
+
+    <h3>Application #{{ application.id }}</h3>
+
+    <table class="approval-table">
+      <tr>
+        <th>Field</th>
+        <th>Value</th>
+      </tr>
+
+      <tr>
+        <td>Applicant Name</td>
+        <td>{{ application.name }}</td>
+      </tr>
+
+      <tr>
+        <td>Employer</td>
+        <td>{{ application.employer }}</td>
+      </tr>
+
+      <tr>
+        <td>Income</td>
+        <td>{{ application.income }}</td>
+      </tr>
+
+      <tr>
+        <td>YTD</td>
+        <td>{{ application.ytd }}</td>
+      </tr>
+
+      <!-- Pay period -->
+      <tr>
+        <td>Pay Period Start</td>
+        <td>{{ application.payPeriodStart }}</td>
+      </tr>
+
+      <tr>
+        <td>Pay Period End</td>
+        <td>{{ application.payPeriodEnd }}</td>
+      </tr>
+
+      <!-- ⭐ REQUIRED: Discrepancy flag -->
+      <tr *ngIf="application.discrepancy">
+        <td colspan="2" style="color:red; font-weight:bold;">
+          ⚠ Discrepancy Detected (AI vs User data mismatch)
+        </td>
+      </tr>
+
+      <tr *ngIf="!application.discrepancy">
+        <td colspan="2" style="color:green;">
+          ✔ Data Verified (No discrepancies)
+        </td>
+      </tr>
+
+    </table>
+
+    <!-- Decision buttons -->
+    <div class="actions">
+        <button class="reject" (click)="rejectApplication()">Reject</button>
+        <button class="approve" (click)="approveApplication()">Approve</button>
+    </div>
+
+    <p *ngIf="approved" class="approved">Approved ✔</p>
+    <p *ngIf="rejected" class="rejected">Rejected ✖</p>
+  </div>
+
+</div>
