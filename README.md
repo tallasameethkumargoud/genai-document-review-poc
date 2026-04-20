@@ -23,7 +23,7 @@ A key design decision was to keep extraction and discrepancy logic in the backen
 
 ## Section B - Production Readiness & Leadership
 
-### B1 — Production Considerations
+### B1 - Production Considerations
 
 To move this proof of concept into production, several improvements are required:
 
