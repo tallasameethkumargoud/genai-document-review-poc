@@ -1,5 +1,9 @@
 # GenAI Document Review – Proof of Concept
 
+**Author:** Sameeth Kumar Goud Talla  
+**Role:** Full-Stack Engineer (Java / Angular)  
+**Date:** April 2026
+
 ## Section A - Architecture & Design Rationale
 
 This solution introduces a GenAI Extraction Service as part of the existing mortgage loan origination platform. The current system includes three main services: Application Service, Document Service, and Underwriting Service. The GenAI service is designed as an independent module that fits between the Document Service and the Angular frontend.
