@@ -2,6 +2,7 @@
 
 **Author:** Sameeth Kumar Goud Talla  
 **Role:** Full-Stack Engineer (Java / Angular)  
+**Email:** sameethkumargoud.talla@gmail.com  
 **Date:** April 2026
 
 ## Section A - Architecture & Design Rationale
